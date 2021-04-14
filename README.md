@@ -41,5 +41,6 @@
 | user_id | references | null: false |
 | picture_book_id |  references  | null: false | 
 
+
 - belongs_to :users
 - belongs_to :photos
