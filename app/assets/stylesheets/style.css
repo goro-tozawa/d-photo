@@ -1,0 +1,43 @@
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+ padding: 0;
+ margin: 0;
+}
+
+header{
+ height: 90px;
+ background-color: #f0f0f0;
+}
+
+.main{
+  height: 100%;
+}
+
+.first-view{
+ height: 60vh;
+ background-color: aqua;
+}
+
+.description{
+ height: 450px;
+ background-color: aquamarine;
+}
+
+.photo-list{
+ height: 1200px;
+ background-color: red;
+}
+
+footer{
+ height: 20px;
+ background-color: saddlebrown;
+}
