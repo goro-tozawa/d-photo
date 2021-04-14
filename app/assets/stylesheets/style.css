@@ -20,7 +20,7 @@ header{
  height: 90px;
  padding: 10px 0;
  background-color: #000;
- opacity: 0.5;
+ box-shadow: 0px 5px 5px #000;
  display: flex;
 }
 
@@ -48,11 +48,17 @@ list-style: none;
 
 .main{
  height: 100%;
+ margin-top: 10px;
 }
 
 .first-view{
- height: 60vh;
+ height: 75vh;
  margin: 0 160px;
+}
+
+.top_image{
+  height: 100%;
+  width: 100%;
 }
 
 .description{
