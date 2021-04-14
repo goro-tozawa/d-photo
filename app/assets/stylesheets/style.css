@@ -1,8 +1,11 @@
-body {
+@charset "utf-8";
+
+body{
   font-size: 14px;
   color: #333;
   margin: 0 auto;
 }
+
 h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
   margin: 0;
@@ -15,29 +18,53 @@ ul,li {
 
 header{
  height: 90px;
- background-color: #f0f0f0;
+ padding: 10px 0;
+ background-color: #000;
+ opacity: 0.5;
+ display: flex;
+}
+
+.heading{
+ width: 50%;
+ color: #fff;
+ margin:10px 0 0 30px;
+}
+
+.navbar{
+ width: 50%;
+ padding: 30px;
+ color: #fff;
+ font-size: 20px;
+}
+
+.nav-lists{
+ display: flex;
+ justify-content: space-evenly;
+}
+
+li {
+list-style: none;
 }
 
 .main{
-  height: 100%;
+ height: 100%;
 }
 
 .first-view{
  height: 60vh;
- background-color: aqua;
+ margin: 0 160px;
 }
 
 .description{
  height: 450px;
- background-color: aquamarine;
+ margin: 0 160px;
 }
 
 .photo-list{
  height: 1200px;
- background-color: red;
+ margin: 0 160px;
 }
 
 footer{
  height: 20px;
- background-color: saddlebrown;
 }

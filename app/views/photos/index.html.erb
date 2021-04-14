@@ -1,11 +1,24 @@
-<header>
+<body>
 
-</header>
+  <header>
+  <div class="heading">
+    <h1 class="title">D-Photo</title>
+  </div>
+
+  <div class="navbar">
+    <ul class="nav-lists">
+    <li>新規登録</li>
+    <li>ログイン</li>
+    </ul>
+  </div>
+
+  </header>
 
 <div class="main">
   <div class="first-view">
-  <%# トップページの画像を表示する %>
+    <%= image_tag("DSC_0058.jpg", class: :top_image) %>
   </div>
+  
   <div class="description">
   <%# d-photoの概要を乗せる %>
   </div>
@@ -14,5 +27,7 @@
   </div>
 </div>
 
-<footer>
-</footer>
+  <footer>
+  </footer>
+
+</body>
