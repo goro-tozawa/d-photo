@@ -42,7 +42,6 @@ header{
  justify-content: space-evenly;
 }
 .nav__btn{
-  
 }
 
 li {
@@ -64,6 +63,7 @@ li {
 .top_image{
   height: 100%;
   width: 100%;
+  box-shadow: 0px 2px 2px #333;
 }
 
 .description{
