@@ -41,10 +41,14 @@ header{
  display: flex;
  justify-content: space-evenly;
 }
+.nav__btn{
+  
+}
 
 li {
-list-style: none;
+  list-style: none;
 }
+
 
 .main{
  height: 100%;
