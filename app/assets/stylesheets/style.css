@@ -17,25 +17,32 @@ ul,li {
 }
 
 
+header{
+  height: 90px;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  box-shadow: 10px 5px 5px #333;
+}
+
+.heading{
+  width: 50%;
+  font-size: 20px;
+  font-family: 'Bangers', cursive;
+  /* padding: 20px; */
+  /* margin: 30px; */
+}
+
+
 .first-view{
  height: 80vh;
  width: 100%;
  position: relative;
 }
 
-header{
-  height: 90px;
-  width: 100%;
-  padding: 10px 0;
-  margin-left: 1000px;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 
-.heading{
+.photo-title{
  height: 50%;
  width: 50%;
  color: #fff;
@@ -46,24 +53,30 @@ header{
  bottom: 50%;
 }
 
-.heading h1{
+
+.photo-title h1{
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Bangers', cursive;
+  text-shadow: 1px 2px 3px #808080;
+}
+
+.photo-title h2{
 text-align: center;
-font-size: 60px;
+font-size: 20px;
 font-family: "Hiragino Sans";
 text-shadow: 1px 2px 3px #808080;
 }
 
-.heading h2{
-text-align: center;
-font-size: 100px;
-font-family: 'Bangers', cursive;
-text-shadow: 1px 2px 3px #808080;
-}
+.start__btn{
+ text-decoration: none;
+} 
 
 .navbar{
-  width: 50%;
+  width: 20%;
   padding: 30px;
-  color:#fff;
+  margin-left: 800px;
+  color:#333;
   font-size: 20px;
 }
 
@@ -71,6 +84,7 @@ text-shadow: 1px 2px 3px #808080;
  display: flex;
  justify-content: space-evenly;
 }
+
 .nav__btn{
   text-decoration: none;
 }
