@@ -1,11 +1,10 @@
+<link href="https://fonts.googleapis.com/css?family=Bangers rel="style.css">
+
 <body>
 <div class="first-view">
     <%= image_tag("img2.jpg", class: :top_image) %>
 
   <header>
-   <div class="heading">
-      <h1 class="title">D-Photo</h1>
-   </div>
     <div class="navbar">
       <ul class="nav-lists">
       <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
@@ -15,9 +14,13 @@
       <li>検索</li> %>
       </ul>
     </div>
-
   </div>
   </header>
+
+   <div class="heading">
+      <h1>さぁ、旅に出かけよう</h1>
+      <h2>D-Photo</h2>
+   </div>
 </div>
 
 <div class="main">
