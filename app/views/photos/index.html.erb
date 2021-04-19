@@ -1,26 +1,27 @@
 <body>
+<div class="first-view">
+    <%= image_tag("img2.jpg", class: :top_image) %>
 
   <header>
-  <div class="heading">
-    <h1 class="title">D-Photo</title>
-  </div>
+   <div class="heading">
+      <h1 class="title">D-Photo</h1>
+   </div>
+    <div class="navbar">
+      <ul class="nav-lists">
+      <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: :nav__btn %></li>  
+      
+      <%# <li>ギャラリー</li>
+      <li>検索</li> %>
+      </ul>
+    </div>
 
-  <div class="navbar">
-    <ul class="nav-lists">
-    <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
-    <li><%= link_to '新規登録', new_user_registration_path, class: :nav__btn %></li>
-    
-    <%# <li>ギャラリー</li>
-    <li>検索</li> %>
-    </ul>
   </div>
-
   </header>
+</div>
 
 <div class="main">
-  <div class="first-view">
-    <%= image_tag("img1.jpeg", class: :top_image) %>
-  </div>
+ 
   
   <div class="description">
   <%# d-photoの概要を乗せる %>
