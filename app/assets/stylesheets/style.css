@@ -42,6 +42,7 @@ header{
  justify-content: space-evenly;
 }
 .nav__btn{
+  text-decoration: none;
 }
 
 li {
