@@ -69,8 +69,26 @@ text-shadow: 1px 2px 3px #808080;
 }
 
 .start__btn{
+ display: block;
+ padding: 10px 0px;
+ width: 400px;
+ font-size: 30px;
+ font-family: "Hiragino Sans";
+ text-shadow: 1px 1px 1px #808080;
+ color: #808080;
  text-decoration: none;
+ text-align: center;
+ border: 1px #808080 solid;
+ border-radius: 10px;
+ margin: 80px auto;
+ background-color: white;
+ transition: 0.4s ease;
 } 
+
+.start__btn:hover{
+  color: #fff;
+  background: #808080;
+}
 
 .navbar{
   width: 20%;
@@ -86,7 +104,19 @@ text-shadow: 1px 2px 3px #808080;
 }
 
 .nav__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #808080;
   text-decoration: none;
+  user-select: none;
+  border: 1px #808080 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.nav__btn:hover{
+  color: #fff;
+  background: #808080;
 }
 
 li {
