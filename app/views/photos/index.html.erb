@@ -13,7 +13,6 @@
     <div class="navbar">
       <ul class="nav-lists">
         <li>検索</li>
-
       <% if user_signed_in? %>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :nav__btn %></li>
 
