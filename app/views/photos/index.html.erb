@@ -12,9 +12,16 @@
     </div>
     <div class="navbar">
       <ul class="nav-lists">
-      <li>検索</li>
-      <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: :nav__btn %></li>  
+        <li>検索</li>
+
+      <% if user_signed_in? %>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :nav__btn %></li>
+
+      <% else %>
+
+        <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: :nav__btn %></li>  
+      <% end %>
       </ul>
     </div>
   </div>
