@@ -74,20 +74,20 @@ text-shadow: 1px 2px 3px #808080;
  width: 400px;
  font-size: 30px;
  font-family: "Hiragino Sans";
- text-shadow: 1px 1px 1px #808080;
- color: #808080;
+ text-shadow: 1px 1px 1px #000;
+ color: #fff;
  text-decoration: none;
  text-align: center;
  border: 1px #808080 solid;
  border-radius: 10px;
  margin: 80px auto;
- background-color: white;
+ background-color: #808080;
  transition: 0.4s ease;
 } 
 
 .start__btn:hover{
-  color: #fff;
-  background: #808080;
+  color: #808080;
+  background: #fff;
 }
 
 .navbar{
@@ -96,6 +96,7 @@ text-shadow: 1px 2px 3px #808080;
   margin-left: 800px;
   color:#333;
   font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .nav-lists{
@@ -140,7 +141,22 @@ li {
 .description{
  height: 450px;
  margin: 0 160px;
+ padding-top: 50px;
+ text-align: center;
+ font-family: 'Noto Sans JP', sans-serif;
 }
+
+.description h1{
+  display: inline-block;
+  margin-bottom: 10px;
+ }
+
+
+.bicycle-icon{
+  font-size: 30px;
+  color: #808080;
+}
+
 
 .photo-list{
  height: 1200px;
