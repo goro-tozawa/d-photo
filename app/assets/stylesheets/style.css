@@ -139,16 +139,17 @@ li {
 }
 
 .description{
- height: 450px;
+ height: 350px;
  margin: 0 160px;
- padding-top: 50px;
+ padding-top: 100px;
  text-align: center;
  font-family: 'Noto Sans JP', sans-serif;
 }
 
+
 .description h1{
-  display: inline-block;
-  margin-bottom: 10px;
+  display: block;
+  padding-bottom: 10px;
  }
 
 
@@ -157,10 +158,79 @@ li {
   color: #808080;
 }
 
+.procedure{
+  display: flex;
+  justify-content: space-around;
+  height: 350px;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding-top: 50px;
+ }
+
+.manner{
+  height: 350px;
+  width: 300px;
+  margin-bottom: 50px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow:0px 0px 10px;
+  border:1px solid #808080;
+ }
+
+
+
+ .manner p{
+   text-align: left;
+   font-size: 17px;
+   margin-top: 15px;
+ }
+
+ .new-line{
+   margin-left: 3px;
+ }
+
+ .pen{
+   font-size: 40px;
+   color: 	#33FF66;
+ }
+
+ .camera{
+  font-size: 40px;
+  color: 	#333;
+  opacity: 0.6;
+  margin-top: 30px;
+ }
+
+
+
+.new-post{
+  height: 350px;
+  width: 300px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow:0px 0px 10px;
+  border:1px solid #808080;
+ }
+
+.comment-method{
+  height: 350px;
+  width: 300px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-shadow:0px 0px 10px;
+  border:1px solid #808080;
+ }
+ 
+
 
 .photo-list{
  height: 1200px;
- margin: 0 160px;
+ margin-top: 150px;
+ background-color: 	#EEEEEE;
 }
 
 footer{
