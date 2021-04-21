@@ -203,6 +203,16 @@ li {
   margin-top: 30px;
  }
 
+ .fa-comments{
+  font-size: 40px;
+  margin-top: 80px;
+ }
+
+ .heart{
+  font-size: 40px;
+  margin-top: 80px;
+  color: red;
+ }
 
 
 .new-post{
