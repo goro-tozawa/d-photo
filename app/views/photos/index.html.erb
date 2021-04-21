@@ -1,25 +1,43 @@
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Bangers rel="style.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+
 <body>
 
   <header>
-  <div class="heading">
-    <h1 class="title">D-Photo</title>
-  </div>
+    <div class="heading">
+        <h1 class="title"><i class="fas fa-bicycle"></i></i>D-Photo</h1>
+    </div>
+    <div class="navbar">
+      <ul class="nav-lists">
+        <li>検索</li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :nav__btn %></li>
 
-  <div class="navbar">
-    <ul class="nav-lists">
-    <li>新規登録</li>
-    <li>ログイン</li>
-    <li>ギャラリー</li>
-    <li>検索</li>
-    </ul>
-  </div>
+      <% else %>
 
+        <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: :nav__btn %></li>  
+      <% end %>
+      </ul>
+    </div>
+  </div>
   </header>
 
+<div class="first-view">
+    <%= image_tag("img2.jpg", class: :top_image) %>
+
+   <div class="photo-title">
+      <h1>D-Photo</h1>
+      <h2>さぁ、旅に出かけよう</h2>
+      <%= link_to 'D-Photoをはじめよう', new_user_registration_path, class: :start__btn %>
+   </div>
+</div>
+
 <div class="main">
-  <div class="first-view">
-    <%= image_tag("img1.jpeg", class: :top_image) %>
-  </div>
+ 
   
   <div class="description">
   <%# d-photoの概要を乗せる %>
