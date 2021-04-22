@@ -1,0 +1,26 @@
+<div class="form__main">
+  <%= form_with model: @post, url:photos_path, class: 'registration-main', local: true do |f| %>
+
+  <%# errorメッセージをここに記入する %>
+
+  <div class="field">
+    <%= f.label :title, "タイトル" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "写真を投稿する" %><br />
+    <%= f.file_field :image id:"photo-image" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :area_id, "地域を指定する" %><br />
+    <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"photo-area"}) %>
+  </div>
+
+</div>
+
+
+
+
+

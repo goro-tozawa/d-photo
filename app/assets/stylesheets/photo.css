@@ -1,0 +1,8 @@
+.form__main{
+  min-height: calc(100vh -161px);
+  margin: 0 auto;
+}
+
+.field{
+  margin: 0 auto;
+}
