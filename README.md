@@ -5,6 +5,7 @@
 | name | string | null: false |
 | nickname | string | null: false|
 
+- has_many :photos
 - has_many :comments
 - has_many :photos, through: :comments
 
@@ -13,14 +14,14 @@
 | Column | Type | Options |
 | ---------- | -------- | -------- |
 | title      | string | null: false |
-| catch_copy | text | null: false |
-| concept      | text | null: false |
 | image    | ActiveStorage | ------- |
 | area_id | integer | null: false |
 | user | references | null: false  |
 
+- belongs_to :user
 - has_many : comments
 - has_many : users, through: :comments
+
 
 
 ## commentsテーブル
@@ -31,8 +32,8 @@
 | user | references | null: false |
 | photo |  references  | -------- | 
 
-- belongs_to :users
-- belongs_to :photos
+- belongs_to :user
+- belongs_to :photo
 
 ## nice_functionテーブル
 
