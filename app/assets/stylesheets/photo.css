@@ -1,8 +1,50 @@
-.form__main{
-  min-height: calc(100vh -161px);
+@charset "utf-8";
+
+body{
+  font-size: 14px;
+  color: #333;
   margin: 0 auto;
 }
 
-.field{
-  margin: 0 auto;
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
 }
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+.form__body{
+  display: block;
+  width: 100%;
+  height: 1000px;
+}
+
+
+
+
+
+.form__main{
+  width: 60%;
+  height: 600px;
+  background-color: #EEEEEE;
+  margin: 150px auto;
+  border:1px solid #DDDDDD;
+  border-radius: 15px;
+}
+.caption{
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.input__box{
+  width: 80%;
+  height: 400px;
+  margin: 60px auto;
+}
+
+
+
