@@ -28,7 +28,7 @@ ul,li {
 
 .form__main{
   width: 60%;
-  height: 600px;
+  height: 650px;
   background-color: #EEEEEE;
   margin: 150px auto;
   border:1px solid #DDDDDD;
@@ -46,5 +46,32 @@ ul,li {
   margin: 60px auto;
 }
 
+.field{
+  margin: 60px;
+  font-size: 20px;
+}
 
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+}
 
+.select-box{
+  width: 150px;
+}
+
+.post-btn-contents{
+  width: 100%;
+  text-align: center;
+}
+.post-btn {
+  background: #BBFFFF;
+  border: 1px solid #BBFFFF;
+  
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #fff;
+  width: 25%;
+  height: 50px;
+  font-size: 29px;
+  margin: 0 auto;
+}
