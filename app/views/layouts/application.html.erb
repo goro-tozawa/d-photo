@@ -7,9 +7,35 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<link href="https://fonts.googleapis.com/css?family=Bangers" rel="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   </head>
 
   <body>
+  <header>
+    <div class="heading">
+        <h1 class="title"><i class="fas fa-bicycle"></i>D-Photo</h1>
+    </div>
+    <div class="navbar">
+      <ul class="nav-lists">
+        <li>検索</li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :nav__btn %></li>
+        <li><%= link_to '投稿する', new_photo_path, class: :nav__btn %></li>
+      <% else %>
+
+        <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: :nav__btn %></li>  
+      <% end %>
+      </ul>
+    </div>
+  </div>
+  </header>
     <%= yield %>
+  <footer>
+  </footer>
   </body>
 </html>

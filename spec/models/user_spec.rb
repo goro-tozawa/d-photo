@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
       context '保存できる場合' do
         
         it "name,nickname,email、password,password_confirmationが存在すれば登録できる" do
-                  expect(@user).to be_valid
+        expect(@user).to be_valid
         end
       end
 

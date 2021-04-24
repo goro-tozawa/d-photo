@@ -1,0 +1,41 @@
+<div class="form__body">
+ <div class="emptiness">
+    <div class="form__main">
+        <h1 class="caption">新規投稿</h1>
+        <div class="input__box">
+          <%= form_with(model: @photo, local: true) do |f| %>
+            <div class="field">
+              <%= f.label :title, "Title" %>
+              <p><%= f.text_field :title, placeholder: "例：ヤビツ峠からの見晴らし", autofocus: true%></p>
+            </div>
+
+            <div class="field">
+              <%= f.label :image, "写真を投稿する" %>
+              <p><%= f.file_field :image %></p>
+            </div>
+
+            <div class="field">
+              <%= f.label :area_id, "地域を指定する" %>
+              <p><%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"photo-area"}) %></p>
+            </div>
+        
+            <div class="post-btn-contents">
+              <%= f.submit "投稿する", class:"post-btn" %>
+            </div>
+
+            
+          <% end %>
+       </div>
+
+   <%# errorメッセージをここに記入する %>
+
+
+
+    </div>
+  </div>
+</div>
+<%# <% end %> 
+
+
+
+
