@@ -4,7 +4,16 @@
    <div class="photo-title">
       <h1>D-Photo</h1>
       <h2>さぁ、旅に出かけよう</h2>
+
+      <% if user_signed_in? %>
+
+      <%= link_to '旅の写真を投稿しよう', new_photo_path, class: :start__btn %>
+
+      <% else %>
+
       <%= link_to 'D-Photoをはじめよう', new_user_registration_path, class: :start__btn %>
+
+      <% end %>
    </div>
 </div>
 

@@ -56,6 +56,8 @@ input[type="text"] {
   height: 40px;
 }
 
+
+
 .select-box{
   width: 150px;
 }
@@ -65,13 +67,21 @@ input[type="text"] {
   text-align: center;
 }
 .post-btn {
-  background: #BBFFFF;
-  border: 1px solid #BBFFFF;
-  
-  font-family: 'Noto Sans JP', sans-serif;
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 30px;
   color: #fff;
-  width: 25%;
-  height: 50px;
-  font-size: 29px;
-  margin: 0 auto;
+  text-decoration: none;
+  user-select: none;
+  background: #87CEFA;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+  
+}
+
+.post-btn:hover{
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }

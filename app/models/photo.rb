@@ -7,6 +7,8 @@ class Photo < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :image
-    validates :area_id
+    validates :area
   end
+
+    validates :area_id,numericality: { other_than: 1 }
 end
