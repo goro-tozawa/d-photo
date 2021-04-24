@@ -15,19 +15,19 @@ RSpec.describe Photo, type: :model do
      end
 
     context'保存できない場合' do
-      it "Titleがないと出品することができない"do
+      it "Titleがないと投稿することができない"do
       @photo.title = ""
       @photo.valid?
       expect(@photo.errors.full_messages).to include("Title can't be blank")
       end
 
-      it "地域の情報がないと出品することができない"do
+      it "地域の情報がないと投稿することができない"do
       @photo.area_id = ""
       @photo.valid?
       expect(@photo.errors.full_messages).to include("Area can't be blank", "Area is not a number")
       end
 
-      it "地域の情報がないと出品することができない"do
+      it "地域の情報がid1だと投稿することができない"do
       @photo.area_id = "1"
       @photo.valid?
       expect(@photo.errors.full_messages).to include("Area must be other than 1")

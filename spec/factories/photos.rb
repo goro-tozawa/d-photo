@@ -4,7 +4,7 @@ FactoryBot.define do
     area_id                                       {"2"}
     association :user 
     after(:build) do |message|
-      message.image.attach(io: File.open('public/images/a.png'), filename: 'a.png')
+    message.image.attach(io: File.open('public/images/a.png'), filename: 'a.png')
     end
     end
 end
