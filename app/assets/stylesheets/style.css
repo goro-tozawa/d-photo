@@ -43,8 +43,9 @@ header{
 .top_image{
   position: absolute;
   height: 80vh;
-  opacity: 0;
-  transition:all 1s ease-in-out;
+  /* opacity: 0;
+  transition:all 1s ease-in-out; */
+  /* 作業中に画像が消えるので一度、コメントアウト */
 }
 
 
@@ -286,6 +287,25 @@ height: 200px;
   text-align: center;
   font-family: 'Noto Sans JP', sans-serif;
   padding-bottom: 100px;
+}
+
+.photo-info{
+ display: flex;
+ justify-content: space-around;
+}
+
+.photo-info a{
+  text-decoration: none;
+}
+
+.like-btn{
+  color: red;
+  font-size: 20px;
+}
+
+.like-btn:hover{
+  font-size:30px;
+  /* border-radius: 50%; */
 }
 
 footer{

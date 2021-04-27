@@ -75,6 +75,12 @@
             <h3 class='photo-info'>
               <%= photo.title%>
             </h3> 
+             <a href="/users/<%= photo.user.id %>"><%= photo.user.nickname %></a>
+             <%= link_to photo_likes_path(photo),method: :post do %>
+             <i class="fas fa-heart like-btn"></i>
+             <% end %>
+             <%# <%= button_to 'いいね', photo_likes_path(photo) %> 
+             <%= photo.liked_users.count %>
           </div>
         </li>
       <% end %>
