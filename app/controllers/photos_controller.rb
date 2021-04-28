@@ -3,7 +3,6 @@ class PhotosController < ApplicationController
 
   def index
     @photos = Photo.includes(:user).order("created_at DESC")
-    # @photo = Photo.newは必要？
 
   end
 

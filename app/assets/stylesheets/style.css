@@ -285,7 +285,8 @@ height: 200px;
 
 .catalog{
   text-align: center;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
   padding-bottom: 100px;
 }
 
@@ -296,6 +297,7 @@ height: 200px;
 
 .photo-info a{
   text-decoration: none;
+  padding-top: 12px;
 }
 
 .like-btn{
@@ -305,7 +307,10 @@ height: 200px;
 
 .like-btn:hover{
   font-size:30px;
-  /* border-radius: 50%; */
+}
+
+.like-count{
+  padding-top: 12px;
 }
 
 footer{
