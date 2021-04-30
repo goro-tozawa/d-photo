@@ -12,4 +12,9 @@ class User < ApplicationRecord
   end
 
   has_many :photos
+  has_many :likes
+
+  def liked_by?(photo_id)
+    likes.where(photo_id: photo_id).exists?
+  end
 end

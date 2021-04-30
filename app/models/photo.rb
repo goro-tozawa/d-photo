@@ -2,6 +2,7 @@ class Photo < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :area
   belongs_to :user
+  has_many :likes
   has_one_attached :image
 
   with_options presence: true do

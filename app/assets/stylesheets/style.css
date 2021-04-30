@@ -40,6 +40,14 @@ header{
  position: relative;
 }
 
+.top_image{
+  position: absolute;
+  height: 80vh;
+  /* opacity: 0;
+  transition:all 1s ease-in-out; */
+  /* 作業中に画像が消えるので一度、コメントアウト */
+}
+
 
 
 .photo-title{
@@ -97,7 +105,7 @@ text-shadow: 1px 2px 3px #808080;
   margin-left: 800px;
   color:#333;
   font-size: 20px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'M PLUS 1p', "sens-serif";
 }
 
 .nav-lists{
@@ -107,19 +115,30 @@ text-shadow: 1px 2px 3px #808080;
 
 .nav__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #808080;
+  padding: 0.1em 0em;
+  font-size: 1em;
+  color: #333;
   text-decoration: none;
   user-select: none;
-  border: 1px #808080 solid;
   border-radius: 3px;
-  transition: 0.4s ease;
+  position: relative;
 }
-.nav__btn:hover{
-  color: #fff;
-  background: #808080;
+.nav__btn::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
 }
+.nav__btn:hover::after {
+  transform: scale(1, 1);
+}
+
 
 li {
   list-style: none;
@@ -238,10 +257,57 @@ li {
  
 
 
-.photo-list{
+.photo-contents{
  height: 1200px;
  margin-top: 150px;
+ padding: 100px;
  background-color: 	#EEEEEE;
+position: relative;
+align-items: center;
+}
+
+.photo-lists{
+display: flex;
+/* justify-content: space-between; */
+position: absolute;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+width: 90%;
+height: 70%
+}
+
+
+.photo-img{
+width: 300px;
+height: 200px;
+}
+
+.catalog{
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  padding-bottom: 100px;
+}
+
+.photo-info{
+ display: flex;
+ justify-content: space-around;
+}
+
+.photo-info a{
+  text-decoration: none;
+  padding: 12px;
+}
+
+.count{
+  padding-top: 12px;
+}
+
+
+
+.like-count{
+  padding-top: 12px;
 }
 
 footer{

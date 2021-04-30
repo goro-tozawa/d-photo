@@ -1,0 +1,3 @@
+window.onload = function(){
+document.getElementById('photo_<%= @photo.id %>').innerHTML = '<%= j(render @photo) %>'
+}

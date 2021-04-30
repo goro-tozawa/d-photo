@@ -1,0 +1,28 @@
+ <div class="photo-info">
+    <h3 class='photo-info'>
+      <%= photo.title%>
+    </h3> 
+<% if user_signed_in? %>
+    <% if current_user.liked_by?(photo.id) %>
+
+      <td><%= link_to destroy_like_path(photo),class: "like-link", method: :DELETE, remote: true do %>
+          <i class="fa fa-heart unlike-btn"></i>
+      <% end %>
+      <p class="count"><%= photo.likes.count %></p>
+      </td>
+    <% else %>
+      <td><%= link_to create_like_path(photo),class: "like-link", method: :POST, remote: true do %>
+          <i class="fa fa-heart like-btn"></i>
+      <% end %>
+      <p class="count"><%= photo.likes.count %></p>
+      </td>
+    <% end %> 
+
+<% else %>
+    <td><%= link_to new_user_session_path,class: "like-link" do %>
+      <i class="fa fa-heart unlike-btn"></i>
+    <% end %>
+      <p class="count"><%= photo.likes.count %></p>
+    </td>
+<% end %>
+</div>
