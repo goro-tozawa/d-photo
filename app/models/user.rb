@@ -11,11 +11,10 @@ class User < ApplicationRecord
     validates_format_of :password,with: PASSWORD_REGEX, message: "both letters and numbers"
   end
 
-  has_many :photos, dependent: :destroy
-  has_many :likes, dependent: :destroy
-  has_many :liked_photos, through: :likes, source: :photo
+  has_many :photos
+  has_many :likes
 
-  def already_liked?(photo)
-    self.likes.exists?(photo_id: photo.id)
+  def liked_by?(photo_id)
+    likes.where(photo_id: photo_id).exists?
   end
 end

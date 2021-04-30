@@ -1,12 +1,19 @@
 class LikesController < ApplicationController
+  before_action :photo_params
+
   def create
-    @like = current_user.likes.create(photo_id: params[:photo_id])
-    redirect_back(fallback_location: root_path)
+    Like.create(user_id: current_user.id, photo_id: params[:id])
+    redirect_to root_path
   end
 
   def destroy
-    @like = Like.find_by(photo_id: params[:photo_id], user_id: current_user.id)
-    @like.destroy
-    redirect_back(fallback_location: root_path)
+    Like.find_by(user_id: current_user.id, photo_id: params[:id]).destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def photo_params
+    @photo = Photo.find(params[:id])
   end
 end

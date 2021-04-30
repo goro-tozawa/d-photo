@@ -1,25 +1,19 @@
-<li class="list">
-    <%= link_to photo_path(photo.id) do %>
-    <div class='photo-img-content'>
-        <%= image_tag photo.image, class: "photo-img" if photo.image.attached?%>
-    <% end %>
-    </div>
-  
-    <div class="photo-info">
-      <h3 class='photo-info'>
-        <%= photo.title%>
-      </h3> 
-      <tr>
-      <td><a href="/users/<%= photo.user.id %>"><%= photo.user.nickname %></a>
-        <%= link_to photo_likes_path(photo),method: :post, remote: true, id:"like-btn" do %>
-        <i class="fas fa-heart like-btn"></i>
-        <% end %>
+ <div class="photo-info">
+    <h3 class='photo-info'>
+      <%= photo.title%>
+    </h3> 
+    <% if current_user.liked_by?(photo.id) %>
 
-        <div class="like-count">
-          <%= photo.liked_users.count %>
-        </div>
-        
-       </td>
-      </tr>
-    </div>
-  </li>
+      <td><%= link_to destroy_like_path(photo),class: "like-link", method: :DELETE, remote: true do %>
+          <i class="fa fa-heart unlike-btn"></i>
+      <% end %>
+      <p class="count"><%= photo.likes.count %></p>
+      </td>
+    <% else %>
+      <td><%= link_to create_like_path(photo),class: "like-link", method: :POST, remote: true do %>
+          <i class="fa fa-heart like-btn"></i>
+      <% end %>
+      <p class="count"><%= photo.likes.count %></p>
+      </td>
+    <% end %> 
+</div>

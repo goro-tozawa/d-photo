@@ -297,17 +297,14 @@ height: 200px;
 
 .photo-info a{
   text-decoration: none;
+  padding: 12px;
+}
+
+.count{
   padding-top: 12px;
 }
 
-.like-btn{
-  color: red;
-  font-size: 20px;
-}
 
-.like-btn:hover{
-  font-size:30px;
-}
 
 .like-count{
   padding-top: 12px;

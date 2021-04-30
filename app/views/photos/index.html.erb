@@ -64,7 +64,18 @@
     <h1 class="catalog">Post List</h1>
     <ul class="photo-lists">
       <% @photos.each do |photo|%>
-        <%= render 'photo', photo: photo %>
+        <li class="list">
+        <%= link_to photo_path(photo.id) do %>
+        <div class='photo-img-content'>
+            <%= image_tag photo.image, class: "photo-img" if photo.image.attached?%>
+        <% end %>
+        </div>
+      <tbody>
+        <tr id="photo_<%= photo.id %>">
+          <%= render 'photo', photo: photo %>
+        </tr>
+      </tbody>
+       </li>
       <% end %>
     </ul>
     <%# #投稿が１０を超えたら試す %>
