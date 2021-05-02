@@ -1,6 +1,12 @@
 <div class="show-main">
  <div class="show-box">
       <div class="show-photo">
+        <%= link_to @photo.image, "data-lightbox": @photo.image, class:"show-box-img" do %>
+        <%= image_tag @photo.image, class:"show-box-img"%>
+        <% end %>
+        <%# <%= link_to @photo.image, class:"show-box-img" %> 
+        <%# <%= image_tag @photo.image,class:"show-box-img" %> 
+        
       </div>
       <div class="show-profile">
       </div>
