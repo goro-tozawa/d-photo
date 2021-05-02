@@ -266,6 +266,7 @@ position: relative;
 align-items: center;
 }
 
+
 .photo-lists{
 display: flex;
 /* justify-content: space-between; */
@@ -277,11 +278,16 @@ width: 90%;
 height: 70%
 }
 
+.photo-lists h3{
+text-align: center;
+}
 
 .photo-img{
 width: 300px;
 height: 200px;
 }
+
+
 
 .catalog{
   text-align: center;
@@ -293,6 +299,7 @@ height: 200px;
 .photo-info{
  display: flex;
  justify-content: space-around;
+ padding-bottom: 20px;
 }
 
 .photo-info a{

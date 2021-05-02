@@ -67,9 +67,10 @@
         <li class="list">
         <%= link_to photo_path(photo.id) do %>
         <div class='photo-img-content'>
-            <%= image_tag photo.image, class: "photo-img" if photo.image.attached?%>
+            <%= image_tag photo.image, class: "photo-img" if photo.image.attached?%><br>
         <% end %>
         </div>
+        <h3><%= photo.title%></h3>
       <tbody>
         <tr id="photo_<%= photo.id %>">
           <%= render 'photo', photo: photo %>

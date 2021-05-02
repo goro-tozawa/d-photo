@@ -1,6 +1,6 @@
  <div class="photo-info">
     <h3 class='photo-info'>
-      <%= photo.title%>
+      <%= photo.user.nickname%>
     </h3> 
 <% if user_signed_in? %>
     <% if current_user.liked_by?(photo.id) %>
