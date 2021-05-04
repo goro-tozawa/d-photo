@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :show, :create]
+  before_action :authenticate_user!, only: [:new, :edit, :create]
 
   def index
     @photos = Photo.includes(:user).order("created_at DESC")
