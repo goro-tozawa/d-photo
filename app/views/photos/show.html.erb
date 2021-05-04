@@ -10,9 +10,15 @@
         <div class="show-icon">
           <li><img src=<%= @photo.user.image %> class = "profile-icon"></li>
         </div>
-        <div class="profile-date">
+
+        <div class="show-date">
           <li><h2><%= @photo.user.nickname%></h2></li>
         </div>
+        
+        <div class="show-self_introduction">
+          <li><h2><%= @photo.user.self_introduction%></h2></li>
+         </div> 
+        
        </div>
 
   <div class="show-bottom">

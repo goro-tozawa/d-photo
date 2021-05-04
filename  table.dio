@@ -1,13 +1,13 @@
 <mxfile>
     <diagram id="eYEJpO8xNW3fcU3qhwMZ" name="ページ1">
-        <mxGraphModel dx="1168" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1163" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="13" value="users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="80" y="90" width="350" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="name (string型, NOT NULL)&#10;&#10;nickname (string型, NOT NULL)&#10;&#10;- has_many :comments&#10;- has_many :photos,through&#10;: :comments&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="13" vertex="1">
+                <mxCell id="14" value="name (string型, NOT NULL)&#10;&#10;nickname (string型, NOT NULL)&#10;&#10;self_introduction (text型, NOT NULL)&#10;- has_many :comments&#10;- has_many :photos,through&#10;: :comments&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="13" vertex="1">
                     <mxGeometry y="30" width="350" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="pictures" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">

@@ -69,8 +69,13 @@
   position: absolute;
 }
 
-.profile-date{
+.show-date{
   text-align: center;
+}
+
+.show-self_introduction{
+  text-align: center;
+  margin:50px;
 }
  
  .show-bottom{

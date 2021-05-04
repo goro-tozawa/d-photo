@@ -91,6 +91,11 @@
   background-color: #d65f4c;
 }
 
+.input-name-self_introduction{
+  width: 400px;
+  height: 180px;
+}
+
 #error_explanation {
   margin: 20px 0;
   padding: 20px 30px;
