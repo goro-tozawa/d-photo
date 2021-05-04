@@ -21,11 +21,13 @@ current_user
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: "Post was successfully created." }
+        format.html { redirect_to root_path, notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @photo }
+      
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
+    
       end
     end
   end

@@ -30,7 +30,7 @@
       <% if user_signed_in? %>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :nav__btn %></li>
         <li><%= link_to '投稿する', new_photo_path, class: :nav__btn %></li>
-        <li><img src=<%= current_user.image %> class = "icon_image"></li>
+
       
       <% else %>
 
@@ -41,6 +41,11 @@
 
       
     </div>
+      <div class="header-icon">
+       <% if user_signed_in? %>
+        <li><img src=<%= current_user.image %> class = "icon_image"></li>
+      <% end %>
+      </div>
   </div>
   </header>
     <%= yield %>

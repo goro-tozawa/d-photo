@@ -5,8 +5,9 @@ class User < ApplicationRecord
   
   with_options presence: true do
     validates :name,format: { with: /\A[ぁ-んァ-ン一-龥々]+\z/, message: 'Name is invalid. Input full-width characters.' }
-
+   
     validates :nickname
+    validates :image
 
     PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
     validates_format_of :password,with: PASSWORD_REGEX, message: "both letters and numbers"

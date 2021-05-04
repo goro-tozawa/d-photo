@@ -2,8 +2,10 @@
 
 | Column | Type | Options |
 | ---------- | -------- | -------- |
+| image    | carrierwave | null: false |
 | name | string | null: false |
 | nickname | string | null: false|
+| self_introduction | text | null: false|
 
 - has_many :photos
 - has_many :comments

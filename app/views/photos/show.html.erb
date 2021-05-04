@@ -4,18 +4,20 @@
         <%= link_to @photo.image, "data-lightbox": @photo.image, class:"show-box-img" do %>
         <%= image_tag @photo.image, class:"show-box-img"%>
         <% end %>
-        <%# <%= link_to @photo.image, class:"show-box-img" %> 
-        <%# <%= image_tag @photo.image,class:"show-box-img" %> 
-        
       </div>
+
       <div class="show-profile">
-      </div>
+        <div class="show-icon">
+          <li><img src=<%= @photo.user.image %> class = "profile-icon"></li>
+        </div>
+        <div class="profile-date">
+          <li><h2><%= @photo.user.nickname%></h2></li>
+        </div>
+       </div>
 
   <div class="show-bottom">
       <div class="show-text">
       </div>
-      <%# <div class="show-title">
-      </div> %>
   </div>
  
  </div>
