@@ -18,6 +18,7 @@
 | title      | string | null: false |
 | image    | ActiveStorage | ------- |
 | area_id | integer | null: false |
+| description | text | null: false|
 | user | references | null: false  |
 
 - belongs_to :user
@@ -37,7 +38,7 @@
 - belongs_to :user
 - belongs_to :photo
 
-## nice_functionテーブル
+## likeテーブル
 
 |  Column | Type | Options |
 | ------------ | ------- | ---------- |

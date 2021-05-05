@@ -110,8 +110,20 @@
   color:#3b5998;
 }
 
+.fa-facebook-square:hover{
+  background-color: #33CCFF;
+  /* border-radius: 50%; */
+  font-size: 60px;
+}
+
 .fa-instagram{
   color:#e1306c;
+}
+
+.fa-instagram:hover{
+  background-color: #FF9966;
+  border-radius: 40%;
+  font-size: 60px;
 }
  
  .show-bottom{
@@ -123,7 +135,11 @@
   width: 65%;
   height: 25%;
   margin-top: 30px;
+  font-size: 30px;
   background-color: white; 
- box-shadow: 10px 5px 10px 10px rgba(0,0,0,0.3); 
+  box-shadow: 10px 5px 10px 10px rgba(0,0,0,0.3); 
   float: left;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
 }
+
