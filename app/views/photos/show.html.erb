@@ -19,14 +19,36 @@
           <li><h2><%= @photo.user.self_introduction%></h2></li>
          </div> 
         
-        <div class="icons">
-         <p><i class="fab fa-twitter sns-icon"></i><i class="fab fa-facebook-square sns-icon"></i><i class="fab fa-instagram sns-icon"></i></p>
-        </div>
-       </div>
+       <div class="icons">
+          <% if @photo.user.twitter.present? %>
+            <%= link_to @photo.user.twitter, target: :_blank do %>
+              <i class="fab fa-twitter sns-icon"></i>
+            <% end %>
+          <% end %>
+      
 
-        <div class="show-bottom">
-            <div class="show-text">
-            </div>
+    
+          <% if @photo.user.facebook.present? %>
+            <%= link_to @photo.user.facebook, target: :_blank do %>
+             <i class="fab fa-facebook-square sns-icon"></i>
+            <% end %>
+          <% end %>
+        
+
+       
+          <% if @photo.user.instagram .present? %>
+            <%= link_to @photo.user.instagram , target: :_blank do %>
+            <i class="fab fa-instagram sns-icon"></i>
+            <% end %>
+          <% end %>
         </div>
- </div>
+
+        
+      </div>
+
+      <div class="show-bottom">
+        <div class="show-text">
+        </div>
+      </div>
+  
 </div>
