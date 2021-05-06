@@ -47,10 +47,13 @@
       </div>
 
       <div class="show-bottom">
-      
         <div class="show-text">
-           <h5>場所/<%= @photo.title %>/<%= @photo.area.name%></h5>
+           <h5 class="show-area">場所/<%= @photo.area.name%>/<%= @photo.title %></h5>
+            <div class="show-description">
+              <%= @photo.description %>
+            </div>
         </div>
+    
       </div>
   
 </div>

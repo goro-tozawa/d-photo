@@ -135,11 +135,20 @@
   width: 65%;
   height: 25%;
   margin-top: 30px;
-  font-size: 30px;
+  /* font-size: 30px; */
   background-color: white; 
   box-shadow: 10px 5px 10px 10px rgba(0,0,0,0.3); 
   float: left;
-  text-align: center;
+  /* text-align: center; */
   font-family: 'Noto Sans JP', sans-serif;
+}
+
+.show-area{
+  font-size: 30px;
+  text-align: center;
+}
+
+.show-description{
+font-size: 20px;
 }
 

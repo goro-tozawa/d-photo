@@ -13,14 +13,14 @@
                 <mxCell id="15" value="photos" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="1160" y="70" width="380" height="480" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="&#10;title(string型, NOT NULL)&#10;&#10;image(ActiveStorage)&#10;&#10;area_id(integer型, NOT NULL)&#10;&#10;description(text型, NOT NULL)&#10;&#10;user(references型, NOT NULL)&#10;&#10;- has_many :commets&#10;&#10;- has_many :users, though: :comments&#10;&#10;&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="15" vertex="1">
+                <mxCell id="16" value="&#10;title(string型, NOT NULL)&#10;&#10;image(ActiveStorage)&#10;&#10;area_id(integer型, NOT NULL)&#10;&#10;description(text型, NOT NULL)&#10;&#10;user(references型, NOT NULL)&#10;&#10;- has_many :commets&#10;&#10;- has_many :likes&#10;&#10;- has_many :users, though: :comments&#10;&#10;&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="15" vertex="1">
                     <mxGeometry y="30" width="380" height="450" as="geometry"/>
                 </mxCell>
                 <mxCell id="37" value="commetns" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" parent="1" vertex="1">
-                    <mxGeometry x="630" y="80" width="370" height="130" as="geometry"/>
+                    <mxGeometry x="630" y="80" width="370" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="user_id (references型, NOT NULL)&#10;&#10;photo_id (references型, NOT NULL)&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="37" vertex="1">
-                    <mxGeometry y="30" width="370" height="100" as="geometry"/>
+                <mxCell id="38" value="user_id (references型, NOT NULL)&#10;&#10;photo_id (references型, NOT NULL)&#10;&#10;belongs_to:user&#10;belongs_to:photo" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="37" vertex="1">
+                    <mxGeometry y="30" width="370" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="54" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;entryX=1.005;entryY=0.458;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="16" target="38" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
@@ -34,11 +34,11 @@
                         <mxPoint x="430" y="625.09" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="62" value="nice_functions" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" parent="1" vertex="1">
-                    <mxGeometry x="630" y="400" width="370" height="130" as="geometry"/>
+                <mxCell id="62" value="likes" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=23;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="400" width="370" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" value="user_id (references型, NOT NULL)&#10;&#10;photo_id (references型, NOT NULL)&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="62" vertex="1">
-                    <mxGeometry y="30" width="370" height="100" as="geometry"/>
+                <mxCell id="63" value="user_id (references型, NOT NULL)&#10;&#10;photo_id (references型, NOT NULL)&#10;&#10;belongs_to:user&#10;belongs_to:photo&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=17;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="62" vertex="1">
+                    <mxGeometry y="30" width="370" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="64" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="14" target="63" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">

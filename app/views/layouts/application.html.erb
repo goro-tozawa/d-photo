@@ -28,6 +28,7 @@
       <ul class="nav-lists">
         <li>検索</li>
       <% if user_signed_in? %>
+        <li><%= link_to 'Mypage', user_path(current_user.id), class: :nav__btn %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :nav__btn %></li>
         <li><%= link_to '投稿する', new_photo_path, class: :nav__btn %></li>
 
@@ -45,6 +46,7 @@
        <% if user_signed_in? %>
         <li><img src=<%= current_user.image %> class = "icon_image"></li>
       <% end %>
+        
       </div>
   </div>
   </header>
