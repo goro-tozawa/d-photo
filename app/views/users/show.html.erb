@@ -1,1 +1,19 @@
-<h1>マイページ<h1>
+<div class="my-page-logo">
+    <h1>Mypage</h1>
+</div>
+
+<div class="my-page-main">
+  <div class="side-ber">
+    <li><img src=<%= current_user.image %> class = "my-page-icon"></li>
+   
+    <li><h3 class="side-ber-font">プロフィール</h3><li>
+    <%# <li><h3 class="side-ber-font">アカウント設定</h3><li> %>
+    <li><%= link_to 'アカウント設定', edit_user_registration_path,method: :get,class: :my_page_font%></li>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :my_page_font%></li>
+  </div>
+
+  <div class="gallery">
+     <h1>マイページ</h1>
+  </div>
+
+</div>
