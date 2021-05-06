@@ -5,6 +5,8 @@ FactoryBot.define do
     email                                       {Faker::Internet.free_email}
     password                                     {"aaaa00"}
     password_confirmation                   {"aaaa00"}
-   
+    # after(:build) do |message|
+    # message.image.attach(io: File.open('public/images/a.png'), filename: 'a.png')
+    # end
    end
  end

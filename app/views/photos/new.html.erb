@@ -18,6 +18,11 @@
               <%= f.label :area_id, "地域を指定する" %>
               <p><%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"select-box", id:"photo-area"}) %></p>
             </div>
+
+            <div class="field">
+              <%= f.label :description, "説明文" %>
+              <p><%= f.text_area :description, size:"110x5",placeholder:"例) しまなみ海道スタート地点の橋。綺麗な海と思わず渡りたくなる大橋。まさに絶景です", maxlength:"400" %></p>
+            </div>
         
             <div class="post-btn-contents">
               <%= f.submit "投稿する", class:"post-btn" %>

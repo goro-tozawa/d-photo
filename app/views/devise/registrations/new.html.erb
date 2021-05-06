@@ -7,28 +7,41 @@
     <div class='account-page__inner--right user-form'>
      <%= form_with model: @user, url:user_registration_path, class: 'registration-main', local: true do |f| %>
         <%= devise_error_messages!%>
+
+              
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :name%>
+             <%= f.label :image %><br/>
+　          <span>アイコン画像を登録してください</span>
+             <%= f.file_field :image, autofocus: true %>
+          </div>
+        </div>
+        
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :name%><br/>
+            <span>名前を入力してください</span>
           </div>
           <div class='field-input'>
-            <%= f.text_field :name, autofocus: true%>
+            <%= f.text_field :name, placeholder:"例) 竈門炭治郎",autofocus: true%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :nickname%>
+            <%= f.label :nickname%><br/>
+            <span>ニックネームを入力してください</span>
           </div>
           <div class='field-input'>
-            <%= f.text_field :nickname, autofocus: true%>
+            <%= f.text_field :nickname, placeholder:"例) ヒカキン", autofocus: true%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%= f.label :email%>
+            <%= f.label :email%><br/>
+             <span>メールアドレスを入力してください</span>
           </div>
           <div class='field-input'>
-            <%= f.email_field :email%>
+            <%= f.email_field :email, placeholder:"例) neko@neko",autofocus: true%>
           </div>
         </div>
         <div class='field'>
@@ -37,7 +50,7 @@
             <i>(英数字6文字以上)</i>
           </div>
           <div class='field-input'>
-            <%= f.password_field :password, autocomplete: "off"%>
+            <%= f.password_field :password, placeholder:"例) a1b2c3", autocomplete: "off"%>
           </div>
         </div>
         <div class='field'>
@@ -48,6 +61,46 @@
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
           </div>
         </div>
+
+       <div class='field'>
+          <div class='field-label'>
+            <%= f.label :twitter%><br/>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :twitter, placeholder:"例) TwitterのURL", autofocus: true%>
+          </div>
+        </div>
+
+       <div class='field'>
+          <div class='field-label'>
+            <%= f.label :facebook%><br/>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :facebook, placeholder:"例) FacebookのURL", autofocus: true%>
+          </div>
+        </div>
+
+       <div class='field'>
+          <div class='field-label'>
+            <%= f.label :instagram %><br/>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :instagram, placeholder:"例) InstagramのURL", autofocus: true%>
+          </div>
+        </div>
+
+   
+
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :self_introduction%><br/>
+             <span>自己紹介を入力してください</span>
+          </div>
+          <div class='field-input'>
+            <%= f.text_area :self_introduction, class:"input-name-self_introduction", id:"self_introduction", placeholder:"例) 神奈川県横浜市在住の自転車乗り。愛車はKUOTA。好きな道は広島のしまなみ海道です！", maxlength:"400" %>
+          </div>
+        </div>
+
         <div class='actions'>
           <%= f.submit "Create Account", class: 'btn'%>
         </div>

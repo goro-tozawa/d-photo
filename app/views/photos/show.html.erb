@@ -1,0 +1,59 @@
+<div class="show-main">
+ <div class="show-box">
+      <div class="show-photo">
+        <%= link_to @photo.image, "data-lightbox": @photo.image, class:"show-box-img" do %>
+        <%= image_tag @photo.image, class:"show-box-img"%>
+        <% end %>
+      </div>
+
+      <div class="show-profile">
+        <div class="show-icon">
+          <li><img src=<%= @photo.user.image %> class = "profile-icon"></li>
+        </div>
+
+        <div class="show-date">
+          <li><h2><%= @photo.user.nickname%></h2></li>
+        </div>
+        
+        <div class="show-self_introduction">
+          <li><h2><%= @photo.user.self_introduction%></h2></li>
+         </div> 
+        
+       <div class="icons">
+          <% if @photo.user.twitter.present? %>
+            <%= link_to @photo.user.twitter, target: :_blank do %>
+              <i class="fab fa-twitter sns-icon"></i>
+            <% end %>
+          <% end %>
+      
+
+    
+          <% if @photo.user.facebook.present? %>
+            <%= link_to @photo.user.facebook, target: :_blank do %>
+             <i class="fab fa-facebook-square sns-icon"></i>
+            <% end %>
+          <% end %>
+        
+
+       
+          <% if @photo.user.instagram .present? %>
+            <%= link_to @photo.user.instagram , target: :_blank do %>
+            <i class="fab fa-instagram sns-icon"></i>
+            <% end %>
+          <% end %>
+        </div>
+
+        
+      </div>
+
+      <div class="show-bottom">
+        <div class="show-text">
+           <h5 class="show-area">場所/<%= @photo.area.name%>/<%= @photo.title %></h5>
+            <div class="show-description">
+              <%= @photo.description %>
+            </div>
+        </div>
+    
+      </div>
+  
+</div>

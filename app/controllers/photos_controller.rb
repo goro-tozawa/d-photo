@@ -1,9 +1,9 @@
 class PhotosController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :show, :create]
+  before_action :authenticate_user!, only: [:new, :edit, :create]
 
   def index
     @photos = Photo.includes(:user).order("created_at DESC")
-
+current_user
   end
 
   def new
@@ -21,11 +21,13 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: "Post was successfully created." }
+        format.html { redirect_to root_path, notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @photo }
+      
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
+    
       end
     end
   end
@@ -40,6 +42,6 @@ class PhotosController < ApplicationController
 
   private
   def photo_params
-    params.require(:photo).permit(:title, :image, :area_id).merge(user_id: current_user.id)
+    params.require(:photo).permit(:title, :image, :area_id, :description).merge(user_id: current_user.id)
   end
 end

@@ -106,6 +106,7 @@ text-shadow: 1px 2px 3px #808080;
   color:#333;
   font-size: 20px;
   font-family: 'M PLUS 1p', "sens-serif";
+  position: relative;
 }
 
 .nav-lists{
@@ -138,6 +139,12 @@ text-shadow: 1px 2px 3px #808080;
 .nav__btn:hover::after {
   transform: scale(1, 1);
 }
+
+.header-icon{
+  margin: 20px 30px;
+}
+
+
 
 
 li {
@@ -266,6 +273,7 @@ position: relative;
 align-items: center;
 }
 
+
 .photo-lists{
 display: flex;
 /* justify-content: space-between; */
@@ -277,11 +285,17 @@ width: 90%;
 height: 70%
 }
 
+.photo-lists h3{
+text-align: center;
+
+}
 
 .photo-img{
 width: 300px;
 height: 200px;
 }
+
+
 
 .catalog{
   text-align: center;
@@ -293,6 +307,7 @@ height: 200px;
 .photo-info{
  display: flex;
  justify-content: space-around;
+ /* margin-bottom: 10px; */
 }
 
 .photo-info a{

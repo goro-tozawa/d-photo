@@ -8,13 +8,15 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<link href="https://fonts.googleapis.com/css?family=Bangers" rel="style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -26,15 +28,26 @@
       <ul class="nav-lists">
         <li>検索</li>
       <% if user_signed_in? %>
+        <li><%= link_to 'Mypage', user_path(current_user.id), class: :nav__btn %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :nav__btn %></li>
         <li><%= link_to '投稿する', new_photo_path, class: :nav__btn %></li>
+
+      
       <% else %>
 
         <li><%= link_to 'ログイン', new_user_session_path, class: :nav__btn %></li>
         <li><%= link_to '新規登録', new_user_registration_path, class: :nav__btn %></li>  
       <% end %>
       </ul>
+
+      
     </div>
+      <div class="header-icon">
+       <% if user_signed_in? %>
+        <li><img src=<%= current_user.image %> class = "icon_image"></li>
+      <% end %>
+        
+      </div>
   </div>
   </header>
     <%= yield %>

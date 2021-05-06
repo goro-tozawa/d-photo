@@ -28,7 +28,7 @@ ul,li {
 
 .form__main{
   width: 60%;
-  height: 650px;
+  height: 900px;
   background-color: #EEEEEE;
   margin: 150px auto;
   border:1px solid #DDDDDD;
@@ -50,6 +50,8 @@ ul,li {
   margin: 60px;
   font-size: 20px;
 }
+
+
 
 input[type="text"] {
   width: 300px;

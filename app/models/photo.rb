@@ -9,6 +9,7 @@ class Photo < ApplicationRecord
     validates :title
     validates :image
     validates :area
+    validates :description
   end
 
     validates :area_id,numericality: { other_than: 1 }
