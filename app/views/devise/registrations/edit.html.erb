@@ -2,21 +2,42 @@
   <div class='account-page__inner clearfix'>
     <div class='account-page__inner--left account-page__header'>
       <h2>Edit Account</h2>
-      <h5>アカウント情報変更</h5>
+      <h5>アカウント情報の変更</h5>
     </div>
     <div class='account-page__inner--right user-form'>
-     <%= form_with model: @user, url:user_registration_path, class: 'registration-main', local: true do |f| %>
+     <%# <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name), html: { method: :put }) do |f| %> 
+
+    <%= form_with model: @user, url:user_registration_path, class: 'registration-main', local: true do |f| %>
+   
         <%= devise_error_messages!%>
 
               
         <div class='field'>
           <div class='field-label'>
              <%= f.label :image %><br/>
-　          <span>変更するアイコン画像を登録してください</span>
+　          <span>アイコン画像を登録してください</span>
              <%= f.file_field :image, autofocus: true %>
           </div>
         </div>
+
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :nickname%><br/>
+            <span>ニックネームを入力してください</span>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :nickname, placeholder:"例) ヒカキン", autofocus: true%>
+          </div>
+        </div>
         
+         <div class="field">
+           <div class='field-label'>
+          <%= f.label :current_password %> <i>(変更にはパスワードが必要です)</i><br />
+          </div>
+          <%= f.password_field :current_password, autocomplete: "current-password",class: "form-control", placeholder: "必須項目です" %>
+        </div>
+
+
         <div class='field'>
           <div class='field-label'>
             <%= f.label :password%>
@@ -26,6 +47,7 @@
             <%= f.password_field :password, placeholder:"例) a1b2c3", autocomplete: "off"%>
           </div>
         </div>
+
         <div class='field'>
           <div class='field-label'>
             <%= f.label :password_confirmation%>
@@ -35,47 +57,10 @@
           </div>
         </div>
 
-       <div class='field'>
-          <div class='field-label'>
-            <%= f.label :twitter%><br/>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :twitter, placeholder:"例) TwitterのURL", autofocus: true%>
-          </div>
-        </div>
 
-       <div class='field'>
-          <div class='field-label'>
-            <%= f.label :facebook%><br/>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :facebook, placeholder:"例) FacebookのURL", autofocus: true%>
-          </div>
-        </div>
-
-       <div class='field'>
-          <div class='field-label'>
-            <%= f.label :instagram %><br/>
-          </div>
-          <div class='field-input'>
-            <%= f.text_field :instagram, placeholder:"例) InstagramのURL", autofocus: true%>
-          </div>
-        </div>
-
-   
-
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :self_introduction%><br/>
-             <span>自己紹介を入力してください</span>
-          </div>
-          <div class='field-input'>
-            <%= f.text_area :self_introduction, class:"input-name-self_introduction", id:"self_introduction", placeholder:"例) 神奈川県横浜市在住の自転車乗り。愛車はKUOTA。好きな道は広島のしまなみ海道です！", maxlength:"400" %>
-          </div>
-        </div>
 
         <div class='actions'>
-          <%= f.submit "Create Account", class: 'btn'%>
+          <%= f.submit "Edit Account", class: 'btn'%>
         </div>
       </div>
     <% end %>
