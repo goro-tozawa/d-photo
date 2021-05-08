@@ -269,14 +269,16 @@ li {
  margin-top: 150px;
  padding: 100px;
  background-color: 	#EEEEEE;
-position: relative;
+/* position: relative; */
 align-items: center;
+text-align: center;
+justify-content: space-between;
+flex-wrap: wrap;
 }
 
 
 .photo-lists{
 display: flex;
-/* justify-content: space-between; */
 position: absolute;
 flex-direction: column;
 flex-wrap: wrap;

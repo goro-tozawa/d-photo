@@ -7,13 +7,26 @@
     <li><img src=<%= current_user.image %> class = "my-page-icon"></li>
    
     <li><h3 class="side-ber-font">プロフィール</h3><li>
-    <%# <li><h3 class="side-ber-font">アカウント設定</h3><li> %>
     <li><%= link_to 'アカウント設定', edit_user_registration_path,method: :get,class: :my_page_font%></li>
     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :my_page_font%></li>
   </div>
 
   <div class="gallery">
-     <h1>マイページ</h1>
+     <% @user.each do |photo|%>
+     <ul class='item-lists'>
+        <li class="list">
+        <%= link_to photo_path(photo.id) do %>
+        <div class='photo-img-content'>
+            <%= image_tag photo.image, class: "photo-img" if photo.image.attached?%><br>
+        <% end %>
+        </div>
+
+        <h3><%= photo.title%></h3>
+      </li>
+    </ul>
+      <% end %>
+    <%# #投稿が１０を超えたら試す %>
+    </div>
   </div>
 
 </div>
